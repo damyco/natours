@@ -1,0 +1,49 @@
+.form {
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__input {
+    font-size: 1.4rem;
+    font-family: inherit; // inherit font family Lato
+    color: inherit; // inherit font color
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba($color-white, 0.5);
+    border: none;
+    border-bottom: solid 3px transparent; // add 3px invisible in initial state
+    width: 90%;
+    display: block;
+    transition: all .2s ease;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: solid 3px $color-primary;
+    }
+
+    &:focus:invalid {
+      border-bottom: solid 3px $color-secondary-dark;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark-2;
+    }
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all .3s ease;
+  }
+  //select first sibling with '+' (use '~' general sibling selector if more siblings)
+  &__input:placeholder-shown + &__label {
+      //inital state
+      opacity: 0;
+      visibility: hidden;
+      transform:  translateY(-4rem);
+  }
+}
