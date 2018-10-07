@@ -13,6 +13,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-backface-visibility: hidden; // safari prefix
     backface-visibility: hidden; //hide back of the card
     border-radius: 3px;
     overflow: hidden; // fix image overflow to have border radius preserved where image is
