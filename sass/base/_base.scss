@@ -38,3 +38,10 @@ body {
     padding: 0;
   }
 }
+
+
+// text selection 
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
