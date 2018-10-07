@@ -91,6 +91,9 @@
   &:target &__content {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+    @include respond (tab-land) {
+      transform: translate(-50%, -50%) scale(.8);
+    }
   }
 
   &__close {

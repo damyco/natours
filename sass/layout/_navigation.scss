@@ -63,6 +63,9 @@
     @include absCenter;
     list-style: none;
     text-align: center;
+    @include respond (tab-port){
+      width: 100%;
+    }
   }
   &__item {
     margin: 1rem;
